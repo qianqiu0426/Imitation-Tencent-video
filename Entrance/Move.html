@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>电影</title>
+		<link rel="stylesheet" type="text/css" href="../css/style.css">
+		<link rel="stylesheet" type="text/css" href="../css/Move.css">
+		<link rel="stylesheet" type="text/css" href="../css/image.css">
+		<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<div class="two">
+			<div class="search">
+				<form action="#" method="post">
+					<div class="form-input"><input type="text" placeholder="请在此处输入内容" ></div>
+					<div class="form-button"><i class='bx bx-search-alt-2' style='color:#ffffff'></i></div>
+				</form>
+			</div>
+		</div>
+		<div class="sidebar">
+    		<div class="logo-details">
+      			<i class='bx bxs-videos'></i>
+      			<span class="logo_name">视频网站</span>
+    		</div>
+   			<ul class="nav-links">
+     			<li>
+        			<a href="../index.html">
+         				<i class='bx bx-home'></i>
+          				<span class="link_name">首页</span>
+       				 </a>
+      			</li>
+     			<li>
+       				 <div class="iocn-link">
+          				<a href="Entrance/Move.html">
+            				<i class='bx bx-movie-play' style='color:#0bec2d'></i>
+            				<span class="link_name">电影</span>
+          				</a>
+        			</div>
+      			</li>
+      			<li>
+        			<a href="Music.html">
+          				<i class='bx bx-music'></i>
+          				<span class="link_name">音乐</span>
+        			</a>
+      			</li>
+      			<li>
+        			<div class="iocn-link">
+          				<a href="#">
+            				<i class='bx bx-laugh'></i>
+            				<span class="link_name">综艺</span>
+          				</a>
+        			</div>
+        		</li>
+      			<li>
+        			<a href="#">
+            			<i class='bx bx-face'></i>
+            			<span class="link_name">动漫</span>
+        			</a>
+        		</li>
+      			<li>
+        			<a href="#">
+            			<i class='bx bxs-baby-carriage'></i>
+          				<span class="link_name">少儿</span>
+        			</a>
+      			</li>
+      			<li>
+        			<div class="iocn-link">
+          				<a href="#">
+            				<i class='bx bx-tv'></i>
+            				<span class="link_name">电视剧</span>
+         				</a>
+     			 </li>
+      			<li>
+        			<a href="#">
+          				<i class='bx bx-compass'></i>
+          				<span class="link_name">纪录片</span>
+        			</a>
+      			</li>
+      			<li>
+        			<a href="#">
+          				<i class='bx bx-history'></i>
+          					<span class="link_name">短剧</span>
+        			</a>
+      			</li>
+      				<hr/>
+      				<div class="copyright">
+      					<i class='bx bxs-like'></i><br /><br />
+      					<span>&copy;23云计算0032曾智康</span>
+      				</div>
+			</ul>
+		</div>
+  		<section class="home-section">
+    		<div class="home-content">
+      			<i class='bx bx-menu' ></i>
+    		</div>
+  		</section>
+		<script>
+			let arrow = document.querySelectorAll(".arrow");
+  			for (var i = 0; i < arrow.length; i++) {
+    			arrow[i].addEventListener("click", (e)=>{
+   					let arrowParent = e.target.parentElement.parentElement;
+   					arrowParent.classList.toggle("showMenu");
+    			});
+  			}
+		let sidebar = document.querySelector(".sidebar");
+ 		let sidebarBtn = document.querySelector(".bx-menu");
+  		console.log(sidebarBtn);
+  		sidebarBtn.addEventListener("click", ()=>{
+    		sidebar.classList.toggle("close");
+  		});
+  		</script>
+  		<div class="image">
+  			<div class="shell">
+			<ui class="images">
+				<li class="img"></li>
+				<li class="img"></li>
+				<li class="img"></li>
+				<li class="img"></li>
+				<li class="img"></li>
+			</ui>
+			<ui class="min">
+				<li class="m"></li>
+				<li class="m"></li>
+				<li class="m"></li>
+				<li class="m"></li>
+				<li class="m"></li>
+			</ui>
+			<div class="button">
+				<div class="button-left"><</div>
+				<div class="button-right">></div>
+			</div>
+  		</div>
+  		<div class="navigation">
+  			<ul class="navigationclass">
+				<li><a class="color">分类</a></li>
+				<li><a href="#">战争片</a></li>
+				<li><a href="#">奇幻片</a></li>
+				<li><a href="#">科幻片</a></li>
+				<li><a href="#">剧情片</a></li>
+				<li><a href="#">恐怖片</a></li>
+				<li><a href="#">爱情片</a></li>
+				<li><a href="#">动作片</a></li>
+				<li><a href="#">喜剧片</a></li>
+				<li><a href="#">动画片</a></li>
+				<li><a href="#">悬疑片</a></li><br /><br /><br />
+				<li><a class="color">地区</a></li>
+				<li><a href="#">大陆</a></li>
+				<li><a href="#">漂亮国</a></li>
+				<li><a href="#">核污染国</a></li>
+				<li><a href="#">香港</a></li>
+				<li><a href="#">台湾</a></li>
+				<li><a href="#">韩国</a></li>
+				<li><a href="#">英国</a></li>
+				<li><a href="#">法国</a></li>
+				<li><a href="#">德国</a></li>
+				<li><a href="#">意大利</a></li>
+				<li><a href="#">西班牙</a></li><br /><br /><br />
+				<li><a class="color">年份</a></li>
+				<li><a href="#">2024</a></li>
+				<li><a href="#">2023</a></li>
+				<li><a href="#">2022</a></li>
+				<li><a href="#">2021</a></li>
+				<li><a href="#">2020</a></li>
+				<li><a href="#">2019</a></li>
+				<li><a href="#">2018</a></li>
+				<li><a href="#">2017</a></li>
+				<li><a href="#">2016</a></li>
+				<li><a href="#">2015</a></li>
+				<li><a href="#">2014</a></li>
+			</ul>
+			<br /><br /><br /><br /><br />dsfdsfs<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />dfsdfdsf<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  		</div>
+  		<div class="video">
+			<div class="main">
+  				<a href="jsz.html">
+					<img src="../img/v4.jpg" alt="图片出错了" />
+  				</a>
+			</div>
+  			<div class="main">
+  				<a href="#">
+					<img src="../img/v1.jpg" alt="图片出错了" />
+  				</a>				
+			</div>
+			<div class="main">
+  				<a href="#">
+					<img src="../img/v2.jpg" alt="图片出错了" />
+  				</a>					
+			</div>
+			<div class="main">
+  				<a href="#">
+					<img src="../img/v3.jpg" alt="图片出错了" />
+  				</a>				
+			</div>
+			<div class="main">
+  				<a href="jsz.html">
+					<img src="../img/v4.jpg" alt="图片出错了" />
+  				</a>				
+			</div>
+						<div class="main">
+  				<a href="jsz.html">
+					<img src="../img/v4.jpg" alt="图片出错了" />
+  				</a>					
+			</div>
+						<div class="main">
+  				<a href="jsz.html">
+					<img src="../img/v4.jpg" alt="图片出错了" />
+  				</a>					
+			</div>
+						<div class="main">
+  				<a href="jsz.html">
+					<img src="../img/v4.jpg" alt="图片出错了" />
+  				</a>					
+			</div>
+						<div class="main">
+  				<a href="jsz.html">
+					<img src="../img/v4.jpg" alt="图片出错了" />
+  				</a>				
+			</div>
+						<div class="main">
+  				<a href="jsz.html">
+					<img src="../img/v4.jpg" alt="图片出错了" />
+  				</a>			
+			</div>
+						<div class="main">
+  				<a href="jsz.html">
+					<img src="../img/v4.jpg" alt="图片出错了" />
+  				</a>				
+			</div>
+						<div class="main">
+  				<a href="jsz.html">
+					<img src="../img/v4.jpg" alt="图片出错了" />
+  				</a>				
+			</div>
+						<div class="main">
+  				<a href="jsz.html">
+					<img src="../img/v4.jpg" alt="图片出错了" />
+  				</a>					
+			</div>
+						<div class="main">
+  				<a href="#">
+					<img src="../img/v4.jpg" alt="图片出错了" />
+  				</a>				
+			</div>
+						<div class="main">
+  				<a href="jsz.html">
+					<img src="../img/v4.jpg" alt="图片出错了" />
+  				</a>				
+  		<script type="text/javascript" src="../js/script.js"></script>
+	</body>
+	
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+		<title>你被骗了</title>
+		<style>
+			*{
+    			/* 初始化 */
+   				margin: 0;
+    			padding: 0;
+			}
+			body{
+    			/* 100%窗口高度 */
+    			min-height: 100vh;
+    			/* 弹性布局 水平+垂直居中 */
+    			background-color: #000000;
+			}
+
+			h2{
+    			color: #fff;
+    			font-size: 96px;
+    			/* 字间距 */
+    			letter-spacing: 15px;
+    			/* 转大写 */
+    			text-align: center;
+    			line-height: 76px;
+    			outline: none;
+    			/* 自定义属性--c，可通过var函数对其调用 */
+    			--c:lightseagreen;
+    			/* 调用自定义属性--c，设置文字阴影（发光效果） */
+    			text-shadow: 0 0 10px var(--c),
+	    		0 0 20px var(--c),
+	   			0 0 40px var(--c),
+    			0 0 80px var(--c),
+    			0 0 160px var(--c);
+    			/* 执行动画：动画名 时长 线性的 无限次播放 */
+    			animation: animate 0.1s linear infinite;
+			}
+
+			/* 定义动画 */
+			@keyframes animate {
+   				 to{
+        				/* 色相旋转滤镜（设置度数可改变颜色） */
+       					 filter: hue-rotate(360deg);
+    			}
+			}
+			.box{
+				margin-top: 110px;
+    			text-align: center;
+    			width: 700px;
+    			height: 600px;
+			}
+		</style>
+	</head>
+	<body>
+       		<h2 style="margin-top: 100px;">恭&nbsp;&nbsp;喜&nbsp;&nbsp;你&nbsp;&nbsp;被&nbsp;&nbsp;骗&nbsp;&nbsp;了&nbsp;&nbsp;！</h2>
+    			<video class="box" autoplay loop style="width: 100%;">
+			<source src="../img/你被骗了.mp4" type="video/mp4"></source>
+		</video>
+
+	</body>
+</html>

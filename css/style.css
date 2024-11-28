@@ -1,0 +1,330 @@
+*{
+	margin:0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+}
+.box{
+	width: 100%;
+}
+input {
+	outline: none;
+}
+body{
+    display: flex; /* 设置body为弹性布局 */
+    justify-content: center; /* 水平居中对齐子元素 */
+    min-height: 100vh; /* 设置最小高度为视口高度的100% */
+    background: black; /* 设置背景颜色为浅灰色 */
+}
+.container{
+    position: relative; /* 设置容器相对定位 */
+    display: flex; /* 设置容器为弹性布局 */
+    gap: 60px; /* 设置子元素之间的间距为60像素 */
+}
+.container .box{
+    position: relative; /* 设置子元素相对定位 */
+    width: 200px; /* 设置宽度为200像素 */
+    height: 200px; /* 设置高度为200像素 */
+    background: #fff; /* 设置背景颜色为白色 */
+    border-radius: 35px; /* 设置边框圆角半径为35像素 */
+    background-size: cover; /* 设置背景图片覆盖整个容器 */
+}
+.container .box::before{
+    content: ''; /* 设置伪元素的内容为空 */
+    position: absolute; /* 设置伪元素的定位方式为绝对定位 */
+    top: 20px; /* 设置伪元素的顶部位置为20像素 */
+    left: 0; /* 设置伪元素的左侧位置为0 */
+    width: 100%; /* 设置伪元素的宽度为100% */
+    height: 100%; /* 设置伪元素的高度为100% */
+    inset: 0; /* 设置伪元素的内边距为0 */
+    background: inherit; /* 继承父元素的背景颜色 */
+    border-radius: 35px; /* 设置伪元素的边框圆角半径为35像素 */
+    filter: blur(15px); /* 设置伪元素的模糊效果，模糊半径为15像素 */
+    background-size: cover; /* 设置伪元素的背景图片覆盖整个容器 */
+    opacity: 0.5; /* 设置伪元素的透明度为0.5 */
+    z-index: -1; /* 设置伪元素的层级为-1，使其位于其他元素之下 */
+}
+section video {
+	box-shadow: 0 -100px 0 0 rgba(0, 0, 0, 0.5);
+  position: absolute; /* 绝对定位 */
+  top: 0; /* 距上部 */
+  left: 0; /* 距左部 */
+  width: 100%;
+  height: 780px;
+  object-fit: cover; /* 可替换元素如何适应，此处为裁剪到合适的大小 */
+}
+section  .navigation {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translate(-50%); /* X移动 */
+  display: flex; /* 弹性盒模型 */
+  z-index: 1; /* Z轴层叠顺序 */
+  justify-content: center; /* 主轴对齐方式 */
+  align-items: center; /* 交叉轴对齐方式 */
+}
+
+section .navigation li {
+  list-style: none; /* 清除默认样式 */
+  cursor: pointer;
+  margin: 0 10px;
+  border-radius: 4px;
+  background: #fff; /* 背景颜色 */
+  padding: 3px 3px 0;
+  opacity: 0.7; /* 透明度 */
+  transition: 1s; /* 过渡时间 */
+}
+section .navigation li:hover { /* 悬停时 */
+  opacity: 1; /* 通过修改透明度实现显示 */
+}
+
+section .navigation li img{
+  width: 120px;
+  transition: 0.5s;
+}
+
+section .navigation li img:hover {
+  width: 200px; /* 修改宽度实现放大 */
+}
+/*头部导航栏*/
+.one{
+	position: absolute; /* 设置为绝对定位 */
+	right: 50px;
+	top: 510px;
+	position: absolute;
+	height: 300px;
+	width: 600px;
+}
+/*切换*/
+.two{
+	position: absolute;
+	height: 70px;
+	width: 100%;
+	z-index: 3;
+}
+.search {
+    height: 70px; /* 设置搜索栏的高度为70像素 */
+    margin-bottom: 1px; /* 设置搜索栏底部外边距为1像素 */
+}
+.search form {
+    width: 20%; /* 设置搜索栏表单的宽度为父元素宽度的20% */
+    height: 46px; /* 设置搜索栏表单的高度为46像素 */
+    border-radius: 17px; /* 设置搜索栏表单的圆角半径为17像素 */
+    margin-top: 15px; /* 设置搜索栏表单的上边距为15像素 */
+    margin-left: auto; /* 设置搜索栏表单的左边距自动居中 */
+    margin-right: auto; /* 设置搜索栏表单的右边距自动居中 */
+    overflow: hidden; /* 隐藏超出搜索栏表单高度的内容 */
+    background-color: rgba(128, 128, 128, 0.5); /* 设置搜索栏表单的背景颜色为半透明的淡灰色 */
+    opacity: 0.7; /* 设置搜索栏表单的透明度为0.7 */
+}
+.search form>div {
+    float: left; /* 将搜索栏表单内的子元素向左浮动 */
+}
+.search .form-input {
+    padding-left: 10px; /* 设置输入框左侧内边距为10像素 */
+    width: 87%; /* 设置输入框宽度为父元素宽度的87% */
+    margin-top: 12px; /* 设置输入框上边距为12像素 */
+}
+.search .form-input>input {
+    width: 100%; /* 设置输入框宽度为父元素宽度的100% */
+    border: none; /* 移除输入框的边框 */
+    background: none; /* 移除输入框的背景 */
+    color: white;
+}
+.search .form-button {
+    margin-top: 12px; /* 设置按钮*/
+}
+.container {
+    width: 100%; /* 设置容器的宽度 */
+    height: 70px; /* 设置容器的高度 */
+    border: 1px solid #ccc; /* 设置容器的边框样式 */
+    padding: 10px; /* 设置容器的内边距 */
+}
+/*侧边导航栏*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+.sidebar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 170px;
+  z-index: 100;
+  transition: all 0.5s ease;
+}
+.sidebar.close{
+  width: 85.6px;
+}
+.sidebar .logo-details{
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.sidebar .logo-details i{
+  font-size: 30px;
+  color: #fff;
+  height: 50px;
+  min-width: 78px;
+  text-align: center;
+  line-height: 50px;
+}
+.sidebar .logo-details .logo_name{
+  font-size: 22px;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.3s ease;
+  transition-delay: 0.1s;
+}
+.sidebar.close .logo-details .logo_name{
+  transition-delay: 0s;
+  opacity: 0;
+  pointer-events: none;
+}
+.sidebar .nav-links{
+  height: 100%;
+  padding: 30px 0 150px 0;
+  overflow: auto;
+}
+.sidebar .close .nav-links{
+  overflow: visible;
+}
+.sidebar .nav-links::-webkit-scrollbar{
+  display: none;
+}
+.sidebar .nav-links li{
+  position: relative;
+  list-style: none;
+  transition: all 0.4s ease;
+}
+.sidebar .nav-links li:hover{
+  background: #1d1b31;
+}
+.sidebar .nav-links li .iocn-link{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sidebar.close .nav-links li .iocn-link{
+  display: block
+}
+.sidebar .nav-links li i{
+  height: 50px;
+  min-width: 78px;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.sidebar .nav-links li i:hover{
+	color: #0bec2d;
+}
+.sidebar .nav-links li.showMenu i.arrow{
+  transform: rotate(-180deg);
+}
+.sidebar.close .nav-links i.arrow{
+  display: none;
+}
+.sidebar .nav-links li a{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.sidebar .nav-links li a .link_name{
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+  transition: all 0.4s ease;
+}
+.sidebar.close .nav-links li a .link_name{
+  opacity: 0;
+  pointer-events: none;
+}
+.sidebar .nav-links li .sub-menu{
+  padding: 6px 6px 14px 80px;
+  margin-top: -10px;
+  background: #1d1b31;
+  display: none;
+}
+.sidebar .nav-links li.showMenu .sub-menu{
+  display: block;
+}
+.sidebar .nav-links li .sub-menu a{
+  color: #fff;
+  font-size: 15px;
+  padding: 5px 0;
+  white-space: nowrap;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+.sidebar .nav-links li .sub-menu a:hover{
+  opacity: 1;
+}
+.sidebar.close .nav-links li .sub-menu{
+  position: absolute;
+  left: 100%;
+  top: -10px;
+  margin-top: 0;
+  padding: 10px 20px;
+  border-radius: 0 6px 6px 0;
+  opacity: 0;
+  display: block;
+  pointer-events: none;
+  transition: 0s;
+}
+.sidebar.close .nav-links li:hover .sub-menu{
+  top: 0;
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+}
+.sidebar .nav-links li:hover .sub-menu.blank{
+  top: 50%;
+  transform: translateY(-50%);
+}
+.sidebar.close .profile-details i,
+.sidebar.close .profile-details .profile_name,
+.sidebar.close .profile-details .job{
+  display: none;
+}
+.sidebar .profile-details .job{
+  font-size: 12px;
+}
+.home-section{
+  position: relative;
+  height: 100vh;
+  left: 165px;
+  width: calc(100% - 260px);
+  transition: all 0.5s ease;
+}
+.sidebar.close ~ .home-section{
+  left: 120px;
+  width: calc(100% - 78px);
+}
+.home-section .home-content{
+  height: 65px;
+  display: flex;
+  align-items: center;
+}
+.home-section .home-content .bx-menu,
+.home-section .home-content .text{
+  color: white;
+  font-size: 35px;
+}
+.home-section .home-content .bx-menu{
+	position: fixed;
+  margin: 0 15px;
+  cursor: pointer;
+  z-index: 100;
+}
+hr{
+	border: none;
+    border-top: 1px solid rgb(100,100,100);
+    margin-top: 80px;
+}
+.copyright{
+	text-align: center;
+	margin-top: 20px;
+	color: rgb(100,100,100);
+}

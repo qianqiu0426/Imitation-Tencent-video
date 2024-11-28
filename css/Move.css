@@ -1,0 +1,98 @@
+*
+{
+	margin: 0;    /*元素的上、下、左、右外边距都设置为0*/
+	padding: 0;    /*元素的上、下、左、右内边距都设置为0*/
+	box-sizing: border-box;    /*设置盒子内容、内边距和边框在内的总宽度和高度*/
+	list-style: none;
+}
+ul,ol {
+	list-style: none;
+}
+a{
+	text-decoration:none;
+}
+/*图片轮播*/
+.image{
+	position: absolute;
+	left: 300px;
+	top: 70px;
+	height: 702px;
+	width: 1603px;
+	margin: auto;
+}
+/*导航*/
+.navigation{
+	position: absolute;
+    top: 710px;
+    height: 170px;
+    width: 900px;
+}
+.navigationclass {
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.navigationclass>li {
+	float: left;
+	margin-right: 1%;
+}
+.navigationclass>li>a {
+	display: block;
+	border-radius: 20px;
+	font-size: 13px;
+	color: lightgrey;
+	padding: 4px 15px;
+}
+.navigationclass>li>a:hover {
+	color: white;
+	border: 1px solid orange;
+	background: orange;
+}
+.navigationclass>li .color{
+	color: white;
+	border: 1px solid orange;
+	background: orange;
+}
+/*图片*/
+.video{
+	position: absolute;
+	top: 880px;
+	height: 1110px;
+	width: 100%;
+	right: 0px;
+	z-index: 1;
+}
+.main{
+	margin: 45px;
+	background-size: cover;
+	position: relative;
+	width: 200px;
+	height: 290px;
+	background: #ccc;
+	overflow: hidden;
+	display:inline-block;
+}
+.main a>img{
+	width: 210px;
+	height: auto;
+	transition: 0.5s;
+}
+.main a>img:hover{
+	transform: scale(1.2);
+}
+.btys{
+	width: 100%;
+	height: 30px;
+	background: rgb(200,200,200);
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	opacity: 0.5;
+}
+.main .image a{
+	position:absolute;
+	bottom: 5px;
+	left: 34%;
+	color: #fff;
+	text-decoration: none;
+	text-align: center;
+}
